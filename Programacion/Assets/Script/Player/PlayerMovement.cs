@@ -143,12 +143,4 @@ public class PlayerMovement : MonoBehaviour
             transform.position = CheckPointController.instance.GetLastCheckPoint().transform.position;
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Obstacle"))
-        {
-            rigid.velocity += Vector3.up * 10;
-        }
-    }
 }

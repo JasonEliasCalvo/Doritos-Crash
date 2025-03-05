@@ -12,6 +12,7 @@ public class TimeControllerText : MonoBehaviour
     private string formato;
     [SerializeField]
     private GameObject firework;
+
     private void Start()
     {
         textMeshPro = GetComponent<TextMeshProUGUI>();

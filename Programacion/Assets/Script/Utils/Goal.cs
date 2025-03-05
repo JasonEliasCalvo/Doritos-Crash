@@ -13,6 +13,7 @@ public class Goal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            UIManager.instance.SetWinPanel(true);
             audioSource.PlayOneShot(goalClip);
             GameManager.instance.GameEnd();
         }
