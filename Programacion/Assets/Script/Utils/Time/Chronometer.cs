@@ -20,6 +20,7 @@ public class Chronometer : TimeController
 
     public override void End()
     {
+        UIManager.instance.SetScoore(currentTime);
         eventEndTime?.Invoke();
         activated = false;
     }

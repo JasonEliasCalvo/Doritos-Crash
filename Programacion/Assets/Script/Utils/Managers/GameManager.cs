@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void GameEnd()
     {
         chronometer.Stop();
+        chronometer.End();
         eventGameEnd?.Invoke();
     }
 

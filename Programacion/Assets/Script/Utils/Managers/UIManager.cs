@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -7,6 +9,8 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [SerializeField] GameObject winPanel;
+    [SerializeField] TextMeshProUGUI scooreText;
+
     private void Awake()
     {
         if (instance == null)
@@ -28,4 +32,10 @@ public class UIManager : MonoBehaviour
     {
         winPanel.SetActive(state);
     }
+
+    public void SetScoore(float scoore)
+    {
+        scooreText.text = scoore.ToString();
+    }
 }
+
