@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         timer.eventEndTime += GameStart;
         timer.Initiate(3);
     }
+
     public void GameStart()
     {
         eventGameStart?.Invoke();
