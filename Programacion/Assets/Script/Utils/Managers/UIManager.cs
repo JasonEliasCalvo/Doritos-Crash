@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
 
     public void SetScoore(float scoore)
     {
-        scooreText.text = scoore.ToString();
+        scooreText.text = scoore.ToString() + "s";
     }
 }
 
