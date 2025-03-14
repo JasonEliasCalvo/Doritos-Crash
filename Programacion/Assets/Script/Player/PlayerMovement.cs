@@ -143,4 +143,9 @@ public class PlayerMovement : MonoBehaviour
             transform.position = CheckPointController.instance.GetLastCheckPoint().transform.position;
         }
     }
+
+    public void CrossAnimation()
+    {
+        anim.Play("Idle",0,anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
+    }
 }

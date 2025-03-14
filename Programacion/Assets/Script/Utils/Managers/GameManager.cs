@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        GamePrepate();
     }
 
     public void GamePrepate()
