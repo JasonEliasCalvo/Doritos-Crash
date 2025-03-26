@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[SerializeField]
+[Serializable]
 public class GameInfo
 {
     [SerializeField] List<PlayerInfo> _players = new List<PlayerInfo>();
