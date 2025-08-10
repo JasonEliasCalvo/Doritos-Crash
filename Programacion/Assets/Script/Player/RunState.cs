@@ -14,7 +14,7 @@ public class RunState : BaseState
 
     public override void FixedUpdateState()
     {
-        controller.rigid.velocity = new Vector3(controller.horizontal * (controller.speedMovement * 2), controller.rigid.velocity.y, controller.rigid.velocity.z);
+        controller.rigid.linearVelocity = new Vector3(controller.horizontal * (controller.speedMovement * 2), controller.rigid.linearVelocity.y, controller.rigid.linearVelocity.z);
     }
 
     public override void UpdateState()
@@ -40,7 +40,7 @@ public class RunState : BaseState
         }
         else
         {
-            if (controller.rigid.velocity.y <= 0)
+            if (controller.rigid.linearVelocity.y <= 0)
             {
                 ExitState(controller._fall);
             }

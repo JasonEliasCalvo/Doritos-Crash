@@ -34,7 +34,7 @@ public class IdleState : BaseState
                 ExitState(controller._crouch);
             }
         }
-        else if (controller.rigid.velocity.y <= 0)
+        else if (controller.rigid.linearVelocity.y <= 0)
         {
             ExitState(controller._fall);
         }        

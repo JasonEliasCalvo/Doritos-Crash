@@ -13,7 +13,7 @@ public class FallState : BaseState
 
     public override void FixedUpdateState()
     {
-        controller.rigid.velocity = new Vector3(controller.horizontal * controller.speedMovement, controller.rigid.velocity.y, controller.rigid.velocity.z);
+        controller.rigid.linearVelocity = new Vector3(controller.horizontal * controller.speedMovement, controller.rigid.linearVelocity.y, controller.rigid.linearVelocity.z);
     }
 
     public override void UpdateState()

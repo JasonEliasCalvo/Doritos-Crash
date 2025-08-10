@@ -10,17 +10,17 @@ public class JumpState : BaseState
         Debug.Log("Entro a saltar");
         //controller.anim.CrossFade("Jump", 0f);
         controller.anim.SetTrigger("Jump");
-        controller.rigid.velocity += (Vector3.up * controller.jumpForce);
+        controller.rigid.linearVelocity += (Vector3.up * controller.jumpForce);
     }
 
     public override void FixedUpdateState()
     {
-        controller.rigid.velocity = new Vector3(controller.horizontal * controller.speedMovement, controller.rigid.velocity.y, controller.rigid.velocity.z);
+        controller.rigid.linearVelocity = new Vector3(controller.horizontal * controller.speedMovement, controller.rigid.linearVelocity.y, controller.rigid.linearVelocity.z);
     }
 
     public override void UpdateState()
     {
-        if (controller.rigid.velocity.y <= 0)
+        if (controller.rigid.linearVelocity.y <= 0)
         {
             if (controller.isGrounded)
             {

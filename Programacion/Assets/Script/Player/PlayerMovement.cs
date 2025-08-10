@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void AnimationsParemeter()
     {
-        anim.SetFloat("Vertical", rigid.velocity.y);
+        anim.SetFloat("Vertical", rigid.linearVelocity.y);
         anim.SetFloat("Horizontal", horizontal);
         anim.SetBool("IsGrounded", isGrounded);
     }
